@@ -1,5 +1,5 @@
 # hubot
-Base Hubot Docker image
+Base Hubot Docker image for a hubot talking to Slack
 
 Source: https://github.com/rewardle/hubot
 
