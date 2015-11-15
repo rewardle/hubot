@@ -7,16 +7,12 @@ RUN apt-get -q update \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install hubot and related
-RUN npm install -g hubot yo generator-hubot coffee-script
+RUN npm install -g hubot yo generator-hubot coffee-script hubot-slack
 
 # Setup a user to run as
 RUN adduser --disabled-password --gecos "" yeoman
 USER yeoman
 WORKDIR /home/yeoman
-
-# Clone the slack adapter because current released one has a bug in
-# sending messages direct to people hubot hasn't spoken to before
-RUN git clone https://github.com/slackhq/hubot-slack/
 
 # Create hubot
 RUN yo hubot --name hubot --description "Rewardle Hubot" --adapter slack --defaults
