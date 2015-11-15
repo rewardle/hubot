@@ -7,7 +7,7 @@ RUN apt-get -q update \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install hubot and related
-RUN npm install -g hubot yo generator-hubot coffee-script hubot-slack
+RUN npm install -g hubot yo generator-hubot coffee-script
 
 # Setup a user to run as
 RUN adduser --disabled-password --gecos "" yeoman
@@ -16,6 +16,7 @@ WORKDIR /home/yeoman
 
 # Create hubot
 RUN yo hubot --name hubot --description "Rewardle Hubot" --adapter slack --defaults
+RUN npm install hubot-slack --save
 
 # Default command to start up with
 CMD bin/hubot --adapter slack
