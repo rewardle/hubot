@@ -16,6 +16,7 @@ WORKDIR /home/yeoman
 
 # Create hubot
 RUN yo hubot --name hubot --description "Rewardle Hubot" --adapter slack --defaults
+ENV NODE_PATH /home/yeoman/node_modules
 
 # Default command to start up with
 CMD bin/hubot --adapter slack
