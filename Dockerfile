@@ -17,7 +17,5 @@ WORKDIR /home/yeoman
 # Create hubot
 RUN yo hubot --name hubot --description "Rewardle Hubot" --adapter slack --defaults
 
-RUN npm config set global true
-
 # Default command to start up with
 CMD bin/hubot --adapter slack
