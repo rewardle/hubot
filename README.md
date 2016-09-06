@@ -1,3 +1,5 @@
+[![](https://images.microbadger.com/badges/image/rewardle/hubot.svg)](http://microbadger.com/images/rewardle/hubot)
+
 # hubot
 Base Hubot Docker image for a hubot talking to Slack
 
