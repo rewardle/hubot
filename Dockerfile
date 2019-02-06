@@ -7,7 +7,7 @@ RUN apt-get -q update \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install hubot and related
-RUN npm install -g hubot@2.19.0 yo generator-hubot coffeescript@1.12.7 hubot-slack
+RUN npm install -g hubot yo generator-hubot coffeescript@1.12.7 hubot-scripts hubot-slack
 
 # Setup a user to run as
 RUN adduser --disabled-password --gecos "" yeoman
